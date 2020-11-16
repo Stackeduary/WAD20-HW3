@@ -17,8 +17,8 @@ export default {
     index: Number,
   },
   methods: {
-    toggleItem: function() {
-      this.$store.commit('toggleItem', this.index)
+    likePost: function() {
+      this.$store.commit('likePost', this.index)
     }
   }
 }
