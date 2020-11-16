@@ -12,7 +12,7 @@ Vue.use(Vuex);
 const routes = [
   {path: '/', component: Home},
   {path: '/login', component: login},
-  //{path: '/items/:id', name: "items", component: ItemPage},
+  {path: '/browse', component: browse},
 ];
 
 const router = new VueRouter({routes});
