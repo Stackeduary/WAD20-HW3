@@ -27,7 +27,8 @@ const store = new Vuex.Store({
       new User("John Doe"),
       new User("Bruce Wayne"),
       new User("Richard Stallman")
-    ]
+    ],
+    posts: []
   },
   mutations: {
     likePost: (state, id) => {
