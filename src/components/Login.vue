@@ -1,35 +1,45 @@
 <template>
-  <header>
-    <nav>
-      <div class="logo-container">
-        <img src="res/images/logo.png" alt="postIt">
+  <div>
+  <section class="login-page">
+    <section id="login-container">
+      <div>
+        <h1>Welcome to postIt!</h1>
       </div>
-      <div class="search-container">
-        <input type="text" name="search"><button type="button">Search</button>
+      <div>
+        <h4>
+          <a href="#">Create an Account</a>
+        </h4>
       </div>
-      <div class="avatar-container">
-        <img class="avatar">
-        <div class="drop-down-container">
-          <span id="user-name">John Doe</span>
-          <span id="user-email"></span>
-          <span class="separator"></span>
-          <span>
-              <a href="browse.html">Browse</a>
-            </span>
-          <span class="separator"></span>
-          <span>
-              <a href="login.html">Log Out</a>
-            </span>
-        </div>
+      <div>
+        <h4>Or</h4>
       </div>
-    </nav>
-  </header>
-  <section class="main-container"></section>
+      <div>
+        <h3>Please Log In</h3>
+        <form action="index.html" method="post">
+          <div>
+            <input type="text" name="email" placeholder="Email">
+          </div>
+          <div>
+            <input type="password" name="password" placeholder="Password">
+          </div>
+          <div>
+            <button class="button" type="submit" name="login">Log In</button>
+          </div>
+          <div>
+            <small>
+              <a href="#">Forgot password?</a>
+            </small>
+          </div>
+        </form>
+      </div>
+    </section>
+  </section>
+  </div>
 </template>
 
 <script>
 export default {
-name: "browse.vue"
+  name: "Login.vue"
 }
 </script>
 
@@ -64,7 +74,7 @@ a {
 }
 
 #login-container {
-  background-image: url(../images/logo.png);
+  background-image: url('../logo.png');
   background-size: 20% auto;
   background-repeat: no-repeat;
   background-position: 15px 15px;
@@ -222,7 +232,7 @@ nav div.avatar-container {
 }
 
 .like-button {
-  background-image: url(../images/like.png);
+  background-image: url('../like.png');
   background-size: 15px;
   background-repeat: no-repeat;
   background-position: 5px center;

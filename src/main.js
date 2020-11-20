@@ -1,18 +1,21 @@
 import Vue from 'vue';
 import App from './App.vue';
-import store from './store'; // not sure if we need this
+// import store from './store'; // not sure if we need this
 import Vuex from 'vuex';
 import VueRouter from 'vue-router';
-import Post from "./models/Post";
+//import Post from "./models/Post";
+import Browse from "./components/Browse";
+import Login from "./components/Login";
+//import Profile from "./components/Profile";
 
 Vue.config.productionTip = false;
 Vue.use(VueRouter);
 Vue.use(Vuex);
 
 const routes = [
-  {path: '/', component: Home},
-  {path: '/login', component: login},
-  {path: '/browse', component: browse},
+  //{path: '/', component: Home},
+  {path: '/Login', component: Login},
+  {path: '/Browse', component: Browse},
 ];
 
 const router = new VueRouter({routes});
@@ -20,14 +23,14 @@ const router = new VueRouter({routes});
 // maybe instead of cart <-> profile, cart <-> post ????
 const store = new Vuex.Store({
   state: {
-    profile: new Profile(),
-    users: [
-      new User("John Doe"),
-      new User("Gordon Freeman"),
-      new User("John Doe"),
-      new User("Bruce Wayne"),
-      new User("Richard Stallman")
-    ],
+    //profile: new Profile(),
+    // users: [
+    //   new User("John Doe"),
+    //   new User("Gordon Freeman"),
+    //   new User("John Doe"),
+    //   new User("Bruce Wayne"),
+    //   new User("Richard Stallman")
+    // ],
     posts: []
   },
   mutations: {

@@ -1,4 +1,5 @@
 <template>
+  <div>
   <header>
     <nav>
       <div class="logo-container">
@@ -26,15 +27,17 @@
   </header>
   <router-view></router-view>
   <section class="main-container"></section>
+  </div>
+
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+//import HelloWorld from './components/HelloWorld.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    //HelloWorld
   }
 }
 </script>
@@ -70,7 +73,7 @@ a {
 }
 
 #login-container {
-  background-image: url(../images/logo.png);
+  background-image: url('./logo.png');
   background-size: 20% auto;
   background-repeat: no-repeat;
   background-position: 15px 15px;
@@ -228,7 +231,7 @@ nav div.avatar-container {
 }
 
 .like-button {
-  background-image: url(../images/like.png);
+  background-image: url('./like.png');
   background-size: 15px;
   background-repeat: no-repeat;
   background-position: 5px center;
