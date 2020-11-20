@@ -32,12 +32,22 @@
 </template>
 
 <script>
-//import HelloWorld from './components/HelloWorld.vue'
+
+
+import axios from "axios";
 
 export default {
   name: 'App',
-  components: {
-    //HelloWorld
+  mounted() {
+    axios.get("https://private-anon-4a70cf6323-wad20postit.apiary-mock.com/posts")
+        .then(res => { //********* must update this section to pull from the API **********
+          this.usersList = res.data;
+          console.log(this.usersList)
+        })
+        .catch(error => {
+          console.log(error)
+          // Manage errors if found any
+        })
   }
 }
 </script>
