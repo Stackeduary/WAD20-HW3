@@ -1,11 +1,76 @@
 export default class Post {
 
-    constructor(postText, time, numOfLikes, authorImage, authorName, attachment){
+    constructor(postID, postAuthorFirstName, postAuthorLastName, postAuthorAvatar, createTime, postText, mediaType, mediaURL, postNumOfLikes){
+        this.postID = postID;
+        this.postAuthorFirstName = postAuthorFirstName;
+        this.postAuthorLastName = postAuthorLastName;
+        this.postAuthorAvatar = postAuthorAvatar;
+        this.createTime = createTime;
         this.postText = postText;
-        this.postTime = postTime;
-        this.numOfLikes = numOfLikes;
-        this.authorImage = authorImage;
-        this.authorName = authorName;
-        this.attachment = attachment;
+        this.mediaType = mediaType;
+        this.mediaURL = mediaURL;
+        this.postNumOfLikes = postNumOfLikes;
     }
 }
+
+// the JSON below is from the PostIt API
+// included here to remind me what the structure should be
+// [
+//     {
+//         "id": 1,
+//         "author": {
+//             "firstname": "Gordon",
+//             "lastname": "Freeman",
+//             "avatar": "https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80"
+//         },
+//         "createTime": "Sep 18, 2020 15:16",
+//         "text": "I think it's going to rain",
+//         "media": {
+//             "type": "image",
+//             "url": "http://www.pastatdude.com/uploaded_images/hl2-2007-10-20-16-36-36-32-713089.jpg"
+//         },
+//         "likes": "15k"
+//     },
+//     {
+//         "id": 2,
+//         "author": {
+//             "firstname": "John",
+//             "lastname": "Doe",
+//             "avatar": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80"
+//         },
+//         "createTime": "Sep 18, 2020 16:17",
+//         "text": "Which weighs more, a pound of feathers or a pound of bricks?",
+//         "media": null,
+//         "likes": "25k"
+//     },
+//     {
+//         "id": 3,
+//         "author": {
+//             "firstname": "Bruce",
+//             "lastname": "Wayne",
+//             "avatar": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80"
+//         },
+//         "createTime": "Sep 18, 2020 17:18",
+//         "text": "Felt cute, might delete later",
+//         "media": {
+//             "type": "image",
+//             "url": "https://i.pcmag.com/imagery/reviews/00EfzjLJNL6FNKVxviGg7Zw-2.1569473216.fit_scale.size_1182x667.jpg"
+//         },
+//         "likes": "100k"
+//     },
+//     {
+//         "id": 4,
+//         "author": {
+//             "firstname": "Richard",
+//             "lastname": "Stallman",
+//             "avatar": "https://images.unsplash.com/photo-1553798194-cc0213ae7f99?ixlib=rb-1.2.1&auto=format&fit=crop&w=1051&q=80"
+//         },
+//         "createTime": "Sep 18, 2020 18:19",
+//         "text": null,
+//         "media": {
+//             "type": "video",
+//             "url": "https://assets.mixkit.co/videos/preview/mixkit-software-developer-working-on-code-screen-close-up-1728-large.mp4"
+//         },
+//         "likes": "1k"
+//     }
+// ]
