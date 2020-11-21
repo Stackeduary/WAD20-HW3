@@ -1,54 +1,40 @@
 <template>
-  <div>
-  <header>
-    <nav>
-      <div class="logo-container">
-        <img src="res/images/logo.png" alt="postIt">
-      </div>
-      <div class="search-container">
-        <input type="text" name="search"><button type="button">Search</button>
-      </div>
-      <div class="avatar-container">
-        <img class="avatar">
-        <div class="drop-down-container">
-          <span id="user-name">John Doe</span>
-          <span id="user-email"></span>
-          <span class="separator"></span>
-          <span>
-              <a href="browse.html">Browse</a>
-            </span>
-          <span class="separator"></span>
-          <span>
-              <a href="login.html">Log Out</a>
-            </span>
-        </div>
-      </div>
-    </nav>
-  </header>
-  <router-view></router-view>
-  <section class="main-container"></section>
+  <div id="app">
+    <Header></Header>
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
+  import Header from './components/Header.vue'
 
+  export default {
 
-import axios from "axios";
+    name: 'app',
+    methods: {
 
-export default {
-  name: 'App',
-  mounted() {
-    axios.get("https://private-anon-4a70cf6323-wad20postit.apiary-mock.com/posts")
-        .then(res => { //********* must update this section to pull from the API **********
-          this.usersList = res.data;
-          console.log(this.usersList)
-        })
-        .catch(error => {
-          console.log(error)
-          // Manage errors if found any
-        })
+    },
+    components: {
+      Header,
+    }
   }
-}
+
+// import axios from "axios";
+
+// export default {
+//   name: 'App',
+//   mounted() {
+//     axios.get("https://private-anon-4a70cf6323-wad20postit.apiary-mock.com/posts")
+//         .then(res => { //********* must update this section to pull from the API **********
+//           this.usersList = res.data;
+//           console.log(this.usersList)
+//         })
+//         .catch(error => {
+//           console.log(error)
+//           // Manage errors if found any
+//         })
+//   }
+// }
 </script>
 
 <style>

@@ -40,7 +40,7 @@
 <script>
 // import axios from "axios";
 export default {
-  name: "Login.vue"
+  name: "Login"
 }
 </script>
 
