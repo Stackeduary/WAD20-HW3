@@ -28,7 +28,6 @@
   <router-view></router-view>
   <section class="main-container"></section>
   </div>
-
 </template>
 
 <script>
