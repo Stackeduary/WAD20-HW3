@@ -1,9 +1,10 @@
 <template>
     <header>
         <nav>
-            <div class="logo-container">
+            <div button="logo-container" @click="$router.push('BrowsePosts')">
                 <img src="../assets/images/logo.png" alt="postIt">
             </div>
+
             <div class="search-container">
                 <input type="text" name="search">
                 <button type="button">Search</button>

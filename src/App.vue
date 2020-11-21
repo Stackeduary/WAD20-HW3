@@ -1,23 +1,15 @@
 <template>
     <div id="app">
-        <Header></Header>
         <router-view></router-view>
-        <section class="main-container">
-            <Posts></Posts>
-        </section>
     </div>
 </template>
 
 <script>
-import Header from './components/Header.vue'
-import Posts from './components/Posts.vue'
+// import Header from './components/Header.vue'
+// import Posts from './components/Posts.vue'
 
 export default {
     name: 'app',
-    components: {
-        Header,
-        Posts
-    }
 }
 </script>
 
