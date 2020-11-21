@@ -44,31 +44,6 @@ a {
   color: #40c4ff;
 }
 
-.login-page {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-#login-container {
-  background-image: url('../logo.png');
-  background-size: 20% auto;
-  background-repeat: no-repeat;
-  background-position: 15px 15px;
-  min-width: 25%;
-  padding: 45px 45px;
-  background-color: #ffffff;
-  box-shadow: 0 0 15px rgba(38, 50, 56, 0.33);
-  text-align: center;
-}
-
-#login-container form div > input {
-  padding: 8px 16px;
-  margin: 4px 0;
-}
-
 button {
   padding: 8px 16px;
   margin: 4px 0;
@@ -113,24 +88,6 @@ nav div img {
   border-radius: 100%;
   object-fit: cover;
   object-position: top center;
-}
-
-nav div.search-container > input {
-  box-sizing: border-box;
-  height: 30px;
-  width: 80%;
-  margin: 0;
-  padding: 5px;
-  border: 1px solid #e0e0e0;
-}
-
-nav div.search-container > button {
-  height: 30px;
-  width: 20%;
-  margin: 0;
-  padding: 5px;
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
 }
 
 nav div.avatar-container {

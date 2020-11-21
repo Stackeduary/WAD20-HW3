@@ -1,28 +1,43 @@
 <template>
-  <header>
-    <nav>
-      <div class="logo-container">
-        <img src="../assets/images/logo.png" alt="postIt">
-      </div>
-      <div class="search-container">
-        <input type="text" name="search"><button type="button">Search</button>
-      </div>
-      <div class="avatar-container">
-        <button type="button" name="avatar" id="avatar-button"><img id="avatar-image" src="../assets/images/avatar.png">
-            </button>
-        </div>
-    </nav>
-  </header>
+    <header>
+        <nav>
+            <div class="logo-container">
+                <img src="../assets/images/logo.png" alt="postIt">
+            </div>
+            <div class="search-container">
+                <input type="text" name="search">
+                <button type="button">Search</button>
+            </div>
+            <div class="avatar-container">
+                <button type="button" name="avatar" id="avatar-button"><img id="avatar-image"
+                                                                            src="../assets/images/ratas.jpg">
+                </button>
+            </div>
+        </nav>
+    </header>
+
 </template>
 
 <script>
-  export default {
+export default {
     name: "Header"
-  }
+}
 </script>
 
 <style scoped>
-  button {
+#active-user-info-container {
+    width: 15%;
+    min-height: 15%;
+    margin-left: auto;
+    margin-right: 0;
+    padding: 45px 15px 15px 15px;
+    background-color: #ffffff;
+    display: none;
+    position: fixed;
+    right: 0px;
+}
+
+button {
     padding: 8px 16px;
     margin: 4px 0;
     color: #ffffff;
@@ -89,5 +104,17 @@ nav div.search-container > button {
 nav div.avatar-container {
     margin-right: 15px;
     text-align: right;
+    padding-top: 0;
+}
+
+#avatar-button {
+    padding: 0px 0px;
+    background: transparent;
+    box-shadow: none;
+}
+
+nav div #avatar-image {
+    height: 36px;
+    border-radius: 50%;
 }
 </style>
