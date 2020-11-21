@@ -21,7 +21,8 @@ export default {
     components: {
         Header,
         Posts
-    }
+    },
+
 }
 </script>
 
