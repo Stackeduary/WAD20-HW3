@@ -4,9 +4,9 @@ import VueRouter from 'vue-router';
 import App from './App.vue';
 import Browse from "./components/Browse";
 import Login from "./components/Login";
-import Post from "./models/Post";
-import Profile from "./models/Profile";
-import User from "./models/User";
+// import Post from "./models/Post";
+// import Profile from "./models/Profile";
+// import User from "./models/User";
 
 Vue.config.productionTip = false;
 Vue.use(VueRouter);
@@ -22,16 +22,16 @@ const router = new VueRouter({routes});
 
 // maybe instead of cart <-> profile, cart <-> post ????
 const store = new Vuex.Store({
-  state: {
-    profile: new Profile(),
-    post: new Post(),
-    user: new User(),
-  },
-  mutations: {
-    likePost: (state, id) => {
-
-    }
-  },
+  // state: {
+  //   profile: new Profile(),
+  //   post: new Post(),
+  //   user: new User(),
+  // },
+  // mutations: {
+  //   likePost: (state, id) => {
+  //
+  //   }
+  // },
   getters: {
 
   }
