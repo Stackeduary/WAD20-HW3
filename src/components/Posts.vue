@@ -1,16 +1,28 @@
 <template>
     <div>
-        <div class="post" v-for="(post,id) in this.posts" :key="id">
+        <div class="post" v-for="post in posts" :key="post.id">
             <div class="post-author">
                 <span class="post-author-info">
                     <img :src=post.author.avatar>
                     {{ post.author.firstname }} {{ post.author.lastname }}
                 </span>
-                <small>{{post.createTime}}</small>
+                <small>{{ post.createTime }}</small>
             </div>
             <div class="post-title">
-                <h3>{{post.text}}</h3>
+                <h3>{{ post.text }}</h3>
             </div>
+
+            <div v-if="post.media !== null">
+                <div class="post-image" v-if="post.media.type === 'image'">
+                    <img :src=post.media.url>
+                </div>
+                <div class="post-image" v-else-if="post.media.type === 'video'">
+                    <video controls>
+                        <source :src=post.media.url>
+                    </video>
+                </div>
+            </div>
+
             <div class="post-actions">
                 <button class="like-button"> {{ post.likes }}</button>
             </div>
@@ -19,25 +31,16 @@
 </template>
 
 <script>
-import axios from "axios";
 
 export default {
     name: "Posts",
-    data() {
-        return {
-            posts: []
-        }
+    computed: {
+        posts() {
+            return this.$store.state.posts
+        },
     },
     mounted() {
-        axios.get("https://private-anon-4a70cf6323-wad20postit.apiary-mock.com/posts")
-            .then(res => { //********* must update this section to pull from the API **********
-                this.posts = res.data;
-                console.log(this.posts)
-            })
-            .catch(error => {
-                console.log(error)
-                // Manage errors if found any
-            })
+        this.$store.dispatch("getPosts");
     }
 
 }

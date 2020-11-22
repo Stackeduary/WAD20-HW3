@@ -80,6 +80,7 @@ a {
 
 #login-container {
     background-image: url('../logo.png');
+    margin-top: 80px;
     background-size: 20% auto;
     background-repeat: no-repeat;
     background-position: 15px 15px;

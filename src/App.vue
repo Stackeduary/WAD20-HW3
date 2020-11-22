@@ -5,9 +5,6 @@
 </template>
 
 <script>
-// import Header from './components/Header.vue'
-// import Posts from './components/Posts.vue'
-
 export default {
     name: 'app',
 }
@@ -104,6 +101,21 @@ nav div.search-container > button {
     border-bottom-left-radius: 0;
 }
 
+.like-button {
+    background-image: url('./like.png');
+    background-size: 15px;
+    background-repeat: no-repeat;
+    background-position: 5px center;
+    background-color: #8a8a8a;
+    width: 60px;
+    height: 25px;
+    padding-left: 23px;
+    line-height: 10px;
+    margin-left: 5px;
+    text-align: left;
+    border: none;
+}
+
 nav div.avatar-container {
     margin-right: 15px;
     text-align: right;
@@ -165,25 +177,6 @@ nav div.avatar-container {
     padding: 10px;
 }
 
-.like-button {
-    background-image: url('./like.png');
-    background-size: 15px;
-    background-repeat: no-repeat;
-    background-position: 5px center;
-    background-color: #8a8a8a;
-    width: 60px;
-    height: 25px;
-    padding-left: 23px;
-    line-height: 10px;
-    margin-left: 5px;
-    text-align: left;
-    border: none;
-}
-
-.like-button.liked {
-    background-color: #01579b;
-}
-
 .drop-down-container {
     position: absolute;
     min-width: 150px;
@@ -203,37 +196,5 @@ nav div.avatar-container {
 .drop-down-container span.separator {
     border-bottom: 1px solid #d7d7d7;
     margin: 10px -10px;
-}
-
-.profile {
-    width: 45%;
-    display: inline-block;
-    border: 1px solid #dedede;
-    border-radius: 5px;
-    text-align: center;
-    margin: 1%;
-}
-
-.profile img {
-    width: 75px;
-    height: 75px;
-    border-radius: 100%;
-    object-fit: cover;
-    object-position: top;
-    margin: 5px;
-}
-
-.profile h2 {
-    font-size: 16px;
-}
-
-.follow-button {
-    background-color: #82008f;
-}
-
-.follow-button.followed {
-    background-color: #ffffff;
-    border: 1px solid #82008f;
-    color: #82008f;
 }
 </style>
