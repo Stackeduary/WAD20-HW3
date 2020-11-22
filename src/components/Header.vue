@@ -15,26 +15,40 @@
                 </button>
             </div>
         </nav>
+        <div id="active-user-info">
+            <p id="active-user-name">{{ activeUser.firstname }} {{ activeUser.lastname }}</p>
+            <p id="active-user-email">{{ activeUser.email }}</p>
+            <router-link to="/BrowseProfiles">Browse</router-link>
+            <br>
+            <router-link to="/Login">Log out</router-link>
+            <router-view></router-view>
+        </div>
     </header>
 </template>
 
 <script>
 export default {
-    name: "Header"
+    name: "Header",
+    computed: {
+        activeUser() {
+            return this.$store.state.activeUser
+        }
+    },
+    mounted() {
+        this.$store.dispatch("getActiveUser");
+    }
 }
 </script>
 
 <style scoped>
-#active-user-info-container {
+#active-user-info {
     width: 15%;
-    min-height: 15%;
+    min-height: 10%;
     margin-left: auto;
     margin-right: 0;
-    padding: 45px 15px 15px 15px;
+    padding: 5px 0px 10px 10px;
     background-color: #ffffff;
-    display: none;
-    position: fixed;
-    right: 0px;
+//display: none; position: fixed; right: 0px;
 }
 
 button {
