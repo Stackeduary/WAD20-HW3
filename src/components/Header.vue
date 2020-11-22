@@ -10,12 +10,11 @@
                 <button type="button">Search</button>
             </div>
             <div class="avatar-container">
-                <button type="button" name="avatar" id="avatar-button"><img id="avatar-image"
-                                                                            src="../assets/images/ratas.jpg">
+                <button type="button" id="avatar-button" @click="toggleList"><img :src="activeUser.avatar">
                 </button>
             </div>
         </nav>
-        <div id="active-user-info">
+        <div id="active-user-info" v-show="showMenu">
             <p id="active-user-name">{{ activeUser.firstname }} {{ activeUser.lastname }}</p>
             <p id="active-user-email">{{ activeUser.email }}</p>
             <router-link to="/BrowseProfiles">Browse</router-link>
@@ -29,6 +28,11 @@
 <script>
 export default {
     name: "Header",
+    data: function () {
+        return {
+            showMenu: false
+        }
+    },
     computed: {
         activeUser() {
             return this.$store.state.activeUser
@@ -36,6 +40,11 @@ export default {
     },
     mounted() {
         this.$store.dispatch("getActiveUser");
+    },
+    methods: {
+        toggleList: function () {
+            this.showMenu = !this.showMenu
+        }
     }
 }
 </script>
@@ -48,7 +57,8 @@ export default {
     margin-right: 0;
     padding: 5px 0px 10px 10px;
     background-color: #ffffff;
-//display: none; position: fixed; right: 0px;
+    position: fixed;
+    right: 0px;
 }
 
 button {
@@ -121,14 +131,11 @@ nav div.avatar-container {
     padding-top: 0;
 }
 
-#avatar-button {
+nav div #avatar-button {
     padding: 0px 0px;
     background: transparent;
     box-shadow: none;
-}
-
-nav div #avatar-image {
-    height: 36px;
+    height: 30px;
     border-radius: 50%;
 }
 </style>

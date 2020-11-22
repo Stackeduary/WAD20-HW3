@@ -41,7 +41,6 @@
 </template>
 
 <script>
-// import axios from "axios";
 export default {
     name: "Login",
     components: {}
@@ -233,58 +232,6 @@ nav div.avatar-container {
     display: inline;
 }
 
-.post .post-title ~ .post-actions {
-    padding: 10px;
-}
-
-.like-button {
-    background-image: url('../like.png');
-    background-size: 15px;
-    background-repeat: no-repeat;
-    background-position: 5px center;
-    background-color: #8a8a8a;
-    width: 60px;
-    height: 25px;
-    padding-left: 23px;
-    line-height: 10px;
-    text-align: left;
-    border: none;
-}
-
-.like-button.liked {
-    background-color: #01579b;
-}
-
-.drop-down-container {
-    position: absolute;
-    min-width: 150px;
-    height: auto;
-    background-color: #ffffff;
-    padding: 10px;
-    right: 0;
-    top: 50px;
-    text-align: left;
-    display: none;
-}
-
-.drop-down-container span {
-    display: block;
-}
-
-.drop-down-container span.separator {
-    border-bottom: 1px solid #d7d7d7;
-    margin: 10px -10px;
-}
-
-.profile {
-    width: 45%;
-    display: inline-block;
-    border: 1px solid #dedede;
-    border-radius: 5px;
-    text-align: center;
-    margin: 1%;
-}
-
 .profile img {
     width: 75px;
     height: 75px;
@@ -296,15 +243,5 @@ nav div.avatar-container {
 
 .profile h2 {
     font-size: 16px;
-}
-
-.follow-button {
-    background-color: #82008f;
-}
-
-.follow-button.followed {
-    background-color: #ffffff;
-    border: 1px solid #82008f;
-    color: #82008f;
 }
 </style>

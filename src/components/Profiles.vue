@@ -4,9 +4,9 @@
             <div class="post-author">
                 <img :src=user.avatar>
                 <div class="text">
-                    <p>{{ user.firstname | capitalize }} {{ user.lastname | capitalize }}</p>
+                    <p>{{ user.firstname }} {{ user.lastname }}</p>
                 </div>
-                <button class="follow-button">Follow</button>
+                <FollowButton></FollowButton>
             </div>
         </div>
     </div>
@@ -14,8 +14,13 @@
 
 <script>
 
+import FollowButton from "@/components/FollowButton";
+
 export default {
-    name: "Profiles.vue",
+    name: "Profiles",
+    components: {
+        FollowButton
+    },
     computed: {
         users() {
             return this.$store.state.users
@@ -23,11 +28,6 @@ export default {
     },
     mounted() {
         this.$store.dispatch("getUsers");
-    },
-    capitalize: function (value) {
-      if (!value) return ''
-      value = value.toString()
-      return value.charAt(0).toUpperCase() + value.slice(1)
     }
 }
 </script>

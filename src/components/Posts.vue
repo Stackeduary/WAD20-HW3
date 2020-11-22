@@ -22,9 +22,8 @@
                     </video>
                 </div>
             </div>
-
             <div class="post-actions">
-                <button class="like-button"> {{ post.likes }}</button>
+                <LikeButton :value="post.likes"></LikeButton>
             </div>
         </div>
     </div>
@@ -32,19 +31,24 @@
 
 <script>
 
+import LikeButton from "@/components/LikeButton";
+
 export default {
     name: "Posts",
+    components: {
+        LikeButton
+    },
     computed: {
         posts() {
             return this.$store.state.posts
         },
     },
     filters: {
-      capitalize: function (value) {
-        if (!value) return ''
-        value = value.toString()
-        return value.charAt(0).toUpperCase() + value.slice(1)
-      }
+        capitalize: function (value) {
+            if (!value) return ''
+            value = value.toString()
+            return value.charAt(0).toUpperCase() + value.slice(1)
+        }
     },
     mounted() {
         this.$store.dispatch("getPosts");

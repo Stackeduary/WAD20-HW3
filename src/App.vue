@@ -101,21 +101,6 @@ nav div.search-container > button {
     border-bottom-left-radius: 0;
 }
 
-.like-button {
-    background-image: url('./like.png');
-    background-size: 15px;
-    background-repeat: no-repeat;
-    background-position: 5px center;
-    background-color: #8a8a8a;
-    width: 60px;
-    height: 25px;
-    padding-left: 23px;
-    line-height: 10px;
-    margin-left: 5px;
-    text-align: left;
-    border: none;
-}
-
 nav div.avatar-container {
     margin-right: 15px;
     text-align: right;
