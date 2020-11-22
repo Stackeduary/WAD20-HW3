@@ -4,7 +4,7 @@
             <div class="post-author">
                 <span class="post-author-info">
                     <img :src=post.author.avatar>
-                    {{ post.author.firstname }} {{ post.author.lastname }}
+                    {{ post.author.firstname | capitalize }} {{ post.author.lastname | capitalize }}
                 </span>
                 <small>{{ post.createTime }}</small>
             </div>
@@ -38,6 +38,13 @@ export default {
         posts() {
             return this.$store.state.posts
         },
+    },
+    filters: {
+      capitalize: function (value) {
+        if (!value) return ''
+        value = value.toString()
+        return value.charAt(0).toUpperCase() + value.slice(1)
+      }
     },
     mounted() {
         this.$store.dispatch("getPosts");
